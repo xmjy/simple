@@ -1,7 +1,6 @@
 package indi.xm.jy.loader;
 
 import java.io.*;
-import java.net.MalformedURLException;
 import java.net.URL;
 
 /**
