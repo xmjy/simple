@@ -1,4 +1,4 @@
-package indi.xm.jy.compile;
+package indi.xm.jy.test;
 
 
 import org.junit.Test;
