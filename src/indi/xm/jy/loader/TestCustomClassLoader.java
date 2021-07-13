@@ -1,6 +1,8 @@
 package indi.xm.jy.loader;
 
+import indi.xm.jy.Fxm;
 import indi.xm.jy.loader.FileClassLoader;
+import org.junit.Test;
 import sun.nio.ch.Net;
 
 import java.lang.reflect.Field;
@@ -23,6 +25,23 @@ public class TestCustomClassLoader {
 //        testNetClassLoader();
     }
 
+    /**
+     * jvm 中class对象是由class对象和类加载器共同决定的
+     *
+     * @throws ClassNotFoundException
+     */
+    @Test
+    public void testLoader() throws ClassNotFoundException {
+        Class<?> fxm = Class.forName("indi.xm.jy.Fxm");
+        System.out.println(fxm.getClassLoader());
+        FileClassLoader customLoader = new FileClassLoader("E:\\IdeaProjects\\simple\\out\\production\\simple");
+        Class<?> fxm02 = customLoader.findClass("indi.xm.jy.Fxm");
+        System.out.println(fxm02.getClassLoader());
+        Class<Fxm> fxm03 = Fxm.class;
+        System.out.println(fxm03.getClassLoader());
+        System.out.println(fxm == fxm02);
+        System.out.println(fxm == fxm03);
+    }
 
     // 测试自定义fileclassloadar类加载器
     private static void testFileClassLoader() throws ClassNotFoundException, IllegalAccessException, InstantiationException, InvocationTargetException {
