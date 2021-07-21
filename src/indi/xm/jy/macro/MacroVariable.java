@@ -62,6 +62,12 @@ public class MacroVariable {
         System.out.println(lo);
     }
 
+    /***
+    * @Author: albert.fang
+    * @Description: 主方法
+    * @param args
+    * @return void
+    */
     public static void main(String[] args) {
         new MacroVariable().warpType();
     }

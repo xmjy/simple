@@ -8,8 +8,9 @@ public class Main {
         // 查看当前系统 类路径中包含的路径条目
         System.out.println(System.getProperty("java.class.path"));
         // 用加载当前类的类加载器加载TestBean
-        Class<?> clazz = Class.forName("indi.xm.jy.TestBean");
+        Class<?> clazz = Class.forName("indi.xm.jy.macro.MacroVariable");
         // 查看加载TestBean的类加载器
-        System.out.println(clazz.getClassLoader());
+        System.out.println();
+
     }
 }

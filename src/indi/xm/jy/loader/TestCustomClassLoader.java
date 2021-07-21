@@ -25,6 +25,26 @@ public class TestCustomClassLoader {
 //        testNetClassLoader();
     }
 
+    @Test
+    public void testAAA(){
+        String s = "id, personCode, personNumber, personName, personAge, personWorkYears, sourceId, jobs,\n" +
+                "    `rank`, department, enterprise_id, jobSeq_1_id, jobSeq_2_id, jobSeq_3_id, personType,\n" +
+                "    seqCode, `password`, activity_id, stauts, toolsAllScore, toolsAllWeightScore, email,\n" +
+                "    mobilePhone, noticeWay, noticeType, noticeType2, personSex, personDegree, isNew,\n" +
+                "    expectedBeginDate, expectedEndDate, allReportPdfPath, messageExt, replayMessage,\n" +
+                "    createuserid, createTime, ischarge, personIDNubmer, islogin, isChargeDate, major,\n" +
+                "    applyjob, colleges, cameraDate, jumpTimes, statementDate, customized, usercode, isZhidingAnswer,\n" +
+                "    isAddCV, `status`, testStatus, updateTestStatusDate, telephone, return_Status, sendWay,\n" +
+                "    return_EnterpriseId, updateInfoDate, majorCode, industryCode, expectIndustryCode";
+        String[] split = s.split(",");
+        StringBuilder sb = new StringBuilder();
+        for (String s1 : split) {
+            String trim = s1.trim();
+            sb.append("a.").append(trim).append(", ");
+        }
+        System.out.println(sb.substring(0,sb.length() - 1));
+    }
+
     /**
      * jvm 中class对象是由class对象和类加载器共同决定的
      *
@@ -39,8 +59,12 @@ public class TestCustomClassLoader {
         System.out.println(fxm02.getClassLoader());
         Class<Fxm> fxm03 = Fxm.class;
         System.out.println(fxm03.getClassLoader());
+        Fxm fxmObject = new Fxm();
+        Class<? extends Fxm> fxm04 = fxmObject.getClass();
+        System.out.println(fxm04.getClassLoader());
         System.out.println(fxm == fxm02);
         System.out.println(fxm == fxm03);
+        System.out.println(fxm == fxm04);
     }
 
     // 测试自定义fileclassloadar类加载器
