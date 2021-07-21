@@ -1,6 +1,7 @@
 package indi.xm.jy.loader;
 
-import indi.xm.jy.Fxm;
+
+import indi.xm.jy.entity.Fxm;
 import indi.xm.jy.loader.FileClassLoader;
 import org.junit.Test;
 import sun.nio.ch.Net;

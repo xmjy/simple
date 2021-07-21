@@ -1,4 +1,4 @@
-package indi.xm.jy.loader;
+package indi.xm.jy.test;
 
 import java.util.Arrays;
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.List;
  * @ author: albert.fang
  * @ date:2020/8/2 00:05
  */
-public class TargetForClassLoader {
+public class ClassLoaderPathTest {
 
     public static void main(String[] args) {
 //        bootstrapClassLoader();
