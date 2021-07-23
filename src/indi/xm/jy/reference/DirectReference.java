@@ -20,6 +20,10 @@ public class DirectReference extends Reference{
         System.out.println("DirectReference 静态代码块");
     }
 
+    public static void print(){
+
+    }
+
     // 1、执行此类的main方法，可以初始化此类
     public static void main(String[] args) {
 

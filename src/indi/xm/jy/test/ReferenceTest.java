@@ -21,9 +21,28 @@ public class ReferenceTest {
 //        System.out.println("ReferenceTest 静态代码块");
 //    }
 
-    // 2、通过new创建对象，可以初始化
-    public static void main(String[] args) {
+    // new
+    @Test
+    public void newObject() {
         DirectReference directReference = new DirectReference();
+    }
+
+    // getstatic
+    @Test
+    public void getStatic(){
+        int a = DirectReference.a;
+    }
+
+    // putstatic
+    @Test
+    public void putStatic(){
+        DirectReference.a = 12;
+    }
+
+    // invokestatic
+    @Test
+    public void invokeStatic(){
+        DirectReference.print();
     }
 
     // 3、通过反射的类可以初始化
@@ -48,9 +67,7 @@ public class ReferenceTest {
     // 2、调用常量不会初始化
     @Test
     public void referenceConstant(){
-//        System.out.println(DirectReference.b);
-//        System.out.println(DirectReference.a);
-        System.out.println(DirectReference.c);
+        System.out.println(DirectReference.b);
     }
 
     // 3、通过子类调用父类的静态变量、子类不会初始化
