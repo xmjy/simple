@@ -35,8 +35,8 @@ public class ReferenceTest {
 
     // 4、调用此类的类变量，可以初始化此类
     @Test
-    public void referenceClassParam(){
-        System.out.println(Reference.b);
+    public void referenceStaticFiled(){
+        System.out.println(DirectReference.a);
     }
 
     // 1、通过数组引用来引用类，不会触发此类的初始化
