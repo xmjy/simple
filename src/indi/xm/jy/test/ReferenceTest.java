@@ -1,7 +1,6 @@
 package indi.xm.jy.test;
 
 import indi.xm.jy.reference.DirectReference;
-import indi.xm.jy.reference.Reference;
 import org.junit.Test;
 
 /**
