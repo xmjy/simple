@@ -18,5 +18,15 @@ public class reflectTest {
         Constructor<reflect> constructor = clazz.getDeclaredConstructor(String.class);
         constructor.setAccessible(true);
         reflect reflect = constructor.newInstance("aaa");
+
+        Class<PerfectSingleton> perfect = PerfectSingleton.class;
+        Constructor<PerfectSingleton> con = perfect.getDeclaredConstructor();
+        con.setAccessible(true);
+        PerfectSingleton perfectSingleton = con.newInstance();
+        System.out.println(perfectSingleton.hashCode());
+
+        PerfectSingleton perfectSingleton1 = con.newInstance();
+        System.out.println(perfectSingleton1.hashCode());
+
     }
 }
